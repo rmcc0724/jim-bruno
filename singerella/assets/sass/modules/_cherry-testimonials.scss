@@ -1,0 +1,164 @@
+.tm-testi {
+	&-slider {
+		padding: 0;
+	}
+	&__item {
+		margin-bottom: 70px;
+		&.swiper-slide {
+			margin-bottom: 0;
+		}
+		&-avatar.avatar {
+			align-self: center;
+			margin: 0 0 30px;
+			border-radius: 50%;
+			border: 3px solid #fff;
+			box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.1);
+		}
+		&-body {
+			footer {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			&,
+			p,
+			cite {
+				text-align: center;
+			}
+			p {
+				&:before {
+					content: '\201C';
+				}
+				&:after {
+					content: '\201D';
+				}
+			}
+		}
+		cite {
+			padding: 0;
+			margin-top: 25px;
+			&:before {
+				content: none;
+			}
+		}
+		cite,
+		&-position,
+		&-email,
+		&-company {
+			@include font-size(16/16);
+		}
+		blockquote {
+			padding: 0;
+			&:before {
+				top: 0;
+				left: 20px;
+				font-size: 85px;
+			}
+			#tm_builder_outer_content .tm-testi--boxed &:before {
+				content: none;
+			}
+			.tm-testi__wrap--perview-1 &,
+			.tm-testi-page--archive & {
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+	} // default.tmpl
+	&--default {
+		&.swiper-container {
+			position: static;
+			&[data-atts*='"slidesPerView":1'] {
+				margin: 0 17%;
+			}
+		}
+	} // boxed.tmpl
+	&--boxed {
+		blockquote {
+			border: none;
+			border-left: 3px solid;
+			padding: 45px 30px;
+		}
+	} // speech-bubble.tmpl
+	&--speech-bubble {
+		.tm-testi__item-body:after {
+			left: 75px;
+		}
+	} //swiper carousel
+	& {
+		position: relative;
+	}
+	div.swiper-container {
+		position: static;
+		
+		
+		@include media-breakpoint-up(lg) {
+			margin: 0 80px;
+		}
+
+		&-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+			margin: 0 7px;
+		}
+	}
+	& &-slider {
+		&__next,
+		&__prev {
+			&,
+			.elementor-widget-container & {
+				transition: .3s;
+				opacity: .35;
+				bottom: 0;
+				top: auto;
+				width: 20px;
+				height: 50px;
+				&:hover {
+					opacity: 1;
+				}
+				&:before {
+					content: none;
+				}
+				&:after{
+					@include font-awesome-icon();
+					@include font-size(50/16);
+				}
+			}
+		}
+		&__next {
+			&,
+			.elementor-widget-container & {
+				&,
+				&:hover {
+					right: 0;
+					background: none;
+
+				}
+				&:after{
+					content: '\f105';
+				}
+			}
+		}
+		&__prev {
+			right: 50px;
+			&,
+			.elementor-widget-container & {
+				&,
+				&:hover {
+					left: auto;
+					background: none;
+				}
+				&:after{
+					content: '\f104';
+				}
+			}
+		}
+		&__pags {
+			position: static;
+			margin-top: 15px;
+			.swiper-pagination-bullet {
+				transition: .3s;
+				width: 10px;
+				height: 10px;
+				opacity: 1;
+			}
+		}
+	}
+}

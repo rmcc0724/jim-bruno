@@ -1,0 +1,130 @@
+div.tm_timeline {
+	padding: 0;
+
+	&__tense {
+		height: 1px;
+		margin-top: 0px;
+
+		.tm_timeline-layout-vertical-chessOrder & {
+			width: 1px;
+		}
+	}
+	&__body-tense {
+		border-left: 1px solid;
+	}
+	&__container {
+
+	}
+	&__event {
+		&__dot {
+			width: 22px;
+			height: 22px;
+			box-shadow: 0 0 0 9px #fff;
+			background-color: #fff;
+
+			&:before {
+				content: '';
+				display: block;
+				width: 10px;
+				height: 10px;
+				margin: 6px;
+				border-radius: 50%;
+			}
+		}
+		&__date {
+			@include font-size(14/16);
+		}
+		&__title {
+			margin-bottom: 10px;
+		}
+	}
+	&__pages {
+		padding-bottom: 20px;
+	}
+	& &__control {
+		&, &:hover {
+			top: 20%;
+		}
+	}
+}
+
+div.tm_timeline.tm_timeline-layout-vertical {
+	display: block;
+
+	.tm_timeline__event {
+		margin-bottom: 75px;
+	}
+
+	.tm_timeline__container {
+		margin: 0;
+	}
+
+	.tm_timeline__event__dot {
+		transform: translate(-11px, 0);
+		position: absolute;
+	}
+	.tm_timeline__event-even .tm_timeline__event__dot {
+		transform: translate(10px, 0);
+	}
+
+	.tm_timeline__event__date,
+	.tm_timeline__event__title,
+	.tm_timeline__event__description {
+		transform: translateX(0);
+		padding-left: 40px;
+		padding-right: 0;
+	}
+
+	.tm_timeline__event-even {
+		.tm_timeline__event__date,
+		.tm_timeline__event__title,
+		.tm_timeline__event__description {
+			transform: translateX(0);
+			padding-left: 0;
+			padding-right: 40px;
+		}
+	}
+}
+
+div.tm_timeline.tm_timeline-layout-horizontal {
+	.tm_timeline__tense {
+		top: 0;
+		transform: translateY(11px);
+	}
+	.tm_timeline__event__dot {
+		top: 0;
+		left: 22px;
+		transform: none;
+	}
+	.tm_timeline__event__date {
+		margin-bottom: 5px;
+	}
+	.tm_timeline__event__title {
+		@include font-size(20/16);
+	}
+	.tm_timeline__page__content {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.tm_timeline__event {
+		width: 100%;
+		padding-top: 50px;
+		padding-left: 15px;
+		padding-left: 15px;
+	}
+}
+
+div.timeline_post {
+	.single-timeline_post & {
+		border-top: none;
+		padding-top: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		@include media-breakpoint-up(lg) {
+			padding-top: 58px;
+			padding-left: 58px;
+			padding-right: 58px;
+		}
+	}
+}

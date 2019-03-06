@@ -1,0 +1,71 @@
+/* #Header */
+.header-wrapper {
+	background-image: url($header_bg_image);
+	background-repeat: $header_bg_repeat;
+	background-position: $header_bg_position_x top;
+	background-attachment: $header_bg_attachment;
+}
+
+.site-header {
+	background-color: $header_bg_color;
+}
+
+
+/* showcase-panel */
+.showcase-panel {
+	background-position: $header_showcase_bg_position_x;
+	background-color: $header_showcase_bg_color;
+}
+.showcase-panel:before {
+	background-color: @alpha($header_showcase_color_mask,$header_showcase_opacity_mask{%});
+}
+.showcase-panel__subtitle {
+	color: $showcase_subtitle_color;
+}
+.showcase-panel__title {
+	color: $showcase_title_color;
+}
+.showcase-panel__description {
+	color: $showcase_description_color;
+}
+
+/* ##Logo */
+.site-logo {
+	font-style: $header_logo_font_style;
+	font-weight: $header_logo_font_weight;
+	font-size: $header_logo_font_size{px};
+	font-family: @font_family( $header_logo_font_family );
+}
+
+.site-logo__link, .site-logo__link:hover {
+	color: $regular_h3_color;
+}
+
+/* ##Top Panel */
+.top-panel {
+	background-color: $top_panel_bg;
+}
+.top-panel a {
+	color: $invert_accent_color_1;
+}
+.top-panel a:hover {
+	color: $invert_link_hover_color;
+}
+
+.top-panel .info-block i{
+	color: $regular_accent_color_1;
+}
+
+/* ##Header Message */
+
+.header__message .info-block a[href^="tel:"] {
+	
+}
+
+.header__message .info-block a[href^="tel:"]:hover {
+	color: $regular_link_color;
+}
+
+.header__message .info-block i {
+	color: $regular_accent_color_1;
+}

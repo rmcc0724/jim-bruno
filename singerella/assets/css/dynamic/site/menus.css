@@ -1,0 +1,104 @@
+/* #Main Menu */
+.main-navigation .menu > li > a {
+	color: $invert_text_color;
+	font-family: $main_menu_font_family;
+	font-weight: $main_menu_font_weight;
+	font-style: $main_menu_font_style;
+	font-size: $main_menu_font_size{px};
+	line-height: $main_menu_line_height;
+	letter-spacing: $main_menu_letter_spacing{px};
+	color: $regular_text_color;
+}
+
+.main-navigation .menu > li > a::after {
+	background: $regular_accent_color_1;
+}
+
+.main-navigation .menu > li > a:hover,
+.main-navigation .menu > li.menu-hover > a,
+.main-navigation .menu > li.current_page_item > a,
+.main-navigation .menu > li.current_page_ancestor > a,
+.main-navigation .menu > li.current-menu-item > a,
+.main-navigation .menu > li.current-menu-ancestor > a {
+	color: $regular_link_hover_color;
+}
+
+.main-navigation ul ul a {
+	color: $regular_link_hover_color;
+	font-family: $main_menu_font_family;
+	font-style: $main_menu_font_style;
+	font-size: $main_menu_font_size{px};
+	line-height: $main_menu_line_height;
+}
+.main-navigation .sub-menu > li > a:hover,
+.main-navigation .sub-menu > li.current_page_item > a,
+.main-navigation .sub-menu > li.current_page_ancestor > a,
+.main-navigation .sub-menu > li.current-menu-item > a,
+.main-navigation .sub-menu > li.current-menu-ancestor > a {
+	color: $regular_accent_color_1;
+}
+
+.main-navigation .sub-menu {
+	border-top: 2px solid $regular_accent_color_1;
+	background:  @darken( $header_bg_color, 3.5% );
+}
+
+.menu-item__desc {
+	color: $regular_text_color;
+	font-style: $body_font_style;
+	font-weight: $body_font_weight;
+	font-family: @font_family( $body_font_family );
+}
+
+/* #Footer Menu */
+.footer-menu__items li.current-menu-item a,
+.footer-menu__items li.current_page_item a {
+	color: $regular_text_color;
+}
+
+/* #Stuck Menu */
+
+.main-navigation.isStuck {
+	background-color: @darken( $header_bg_color, 3.5% );
+}
+
+/* #Mobile Menu */
+.menu-toggle__icon,
+.menu-off__icon {
+	color: $regular_accent_color_1;
+}
+
+.menu-toggle {
+	color: $regular_link_hover_color;
+}
+.menu-toggle:hover {
+	color: $regular_link_color;
+}
+
+.menu-toggle span {
+	font-family: $main_menu_font_family;
+	font-weight: $main_menu_font_weight;
+	font-style: $main_menu_font_style;
+}
+
+@media (max-width: 767px) {
+	.main-menu__wrap .menu > li {
+		background-color: @darken( $header_bg_color, 3.5% );
+	}
+
+	.main-menu__wrap .top-panel__menu .menu-item a {
+		color: $invert_text_color;
+	}
+
+	.main-menu__wrap .top-panel__menu .menu-item.current-menu-item a {
+		color: $regular_accent_color_1;
+	}
+
+	.main-menu__wrap .menu .sub-menu-toggle {
+		color: $invert_text_color;
+	}
+
+	.main-menu__wrap .menu .sub-menu .sub-menu-toggle {
+		color: $invert_text_color;
+	}
+}

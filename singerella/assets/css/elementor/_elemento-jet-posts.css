@@ -1,0 +1,12 @@
+.elementor-jet-posts .jet-carousel .jet-posts .slick-next,
+.elementor-jet-posts .jet-carousel .jet-posts .slick-prev {
+  bottom: 0;
+  top: auto;
+  background-color: #000; }
+
+.elementor-jet-posts .jet-carousel .jet-posts .slick-next {
+  right: 10%; }
+
+.elementor-jet-posts .jet-carousel .jet-posts .slick-prev {
+  left: auto;
+  right: 20%; }

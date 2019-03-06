@@ -1,0 +1,85 @@
+body {
+	background-color: $color__background-screen;
+}
+
+.site {
+	.site-main {
+		.page-header {
+			.taxonomy-description {
+				padding-top: 40px;
+			}
+		}
+	}
+
+
+	overflow: hidden;
+
+	.wordwrap & {
+        @include hyphens(auto);
+    }
+
+	&-logo {
+		line-height: 1.1;
+	}
+	&-description {
+		@include font-size(8/16);
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	&-content {
+		.single &,
+		.position-one-right-sidebar &,
+		.position-one-left-sidebar & {
+			margin-bottom: 5em;
+		}
+		.single-cherry-services & .cta_wrap {
+			margin-bottom: -5em;
+		}
+	}
+}
+
+.single .site-main {
+	border: 1px solid $color__border-input;
+	margin-top: 1em;
+	@include media-breakpoint-up(lg) {
+		margin-top: 3em;
+	}
+
+	article.no-thumb {
+		border-top: 1px solid $color__border-input;
+	}
+}
+
+.site-main {
+	.search & {
+		margin-top: 1em;
+		@include media-breakpoint-up(lg) {
+			margin-top: 3em;
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+@import "../layout/layout";
+
+/*--------------------------------------------------------------
+## Header
+--------------------------------------------------------------*/
+@import "primary/header";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Post Formats
+--------------------------------------------------------------*/
+@import "primary/post-formats";
+
+/*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+@import "primary/footer";

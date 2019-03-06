@@ -1,0 +1,136 @@
+.widget-subscribe {
+	.widget-title {
+		text-transform: uppercase;
+		margin: 0 0 8px;
+	}
+	.follow-block + .subscribe-block {
+		border-top: 1px solid rgba(255,255,255,.2);
+
+		.tm_pb_widget_area &,
+		.elementor-widget-container & {
+			margin-top: 50px;
+		}
+		.footer-area & {
+			padding-top: 30px;
+			margin-top: 30px;
+		}
+	}
+	#tm_builder_outer_content .tm_pb_widget_area &,
+	.elementor-widget-container & {
+		max-width: 825px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+.follow-block {
+	text-align: center;
+
+	.sidebar & {
+		padding: 30px;
+	}
+
+	.social-list {
+		.widget-subscribe & {
+			margin: 15px 0 0;
+		}
+		.menu-item + .menu-item {
+			&, #tm_builder_outer_content & {
+				margin-left: 20px;
+			}
+		}
+	}
+
+	.tm_pb_widget_area &,
+	.elementor-widget-container & {
+		padding: 0;
+		border-bottom: none;
+	}
+}
+.subscribe-block {
+	text-align: center;
+
+	.sidebar & {
+		padding: 30px;
+	}
+
+	.tm_pb_widget_area .widget-subscribe &,
+	.elementor-widget-container .widget-subscribe & {
+		padding: 0;
+		background: none;
+	}
+
+	&__input-group {
+		margin-top: 20px;
+
+		.tm_pb_widget_area &,
+		.elementor-widget-container & {
+			display: flex;
+			margin-top: 35px;
+			flex-wrap: wrap;
+
+			@include media-breakpoint-up(sm) {
+				flex-wrap: nowrap;
+			}
+		}
+	}
+	&__input[type='email'] {
+		width: 100%;
+		border-right: none;
+		background-color: #fff;
+
+		.tm_pb_widget_area &,
+		.elementor-widget-container & {
+			background-color: rgba($color__background-input, .21);
+			@include font-size(16/16);
+
+		}
+
+	}
+	&__submit.btn {
+		width: 100%;
+		margin: 10px 0 0;
+		background: none;
+
+		.tm_pb_widget_area &,
+		.elementor-widget-container & {
+			margin: 10px 0 0 0;
+			width: auto;
+
+			@include media-breakpoint-down(sm) {
+				margin: 25px auto 0 auto;
+			}
+
+			@include media-breakpoint-up(xl) {
+				padding: 15px 95px;
+			}
+			
+			@include media-breakpoint-up(sm) {
+				margin: 0 0 0 15px;
+			}
+		}
+	}
+
+	&__form {
+		position: relative;
+	}
+
+	&__messages {
+		padding: 0 20px;
+		text-align: left;
+		margin-top: 14px;
+		@include font-size(14/16);
+	}
+
+	&__error {
+		color: $color__border_not-valid;
+	}
+
+	&__success {
+		color: $color__valid;
+	}
+
+	.subscribe-block__input.error {
+		background: rgba($color__background-input, .21);
+		border: 1px solid $color__border_not-valid;
+	}
+}

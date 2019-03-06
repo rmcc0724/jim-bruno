@@ -1,0 +1,23 @@
+#tm_builder_outer_content  {
+	.tm_pb_blurb {
+		div.tm_pb_main_blurb_image {
+			margin-bottom: 10px;
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 15px;
+			}
+		}
+		&_container {
+			h4 {
+				padding-bottom: 6px;
+				a {
+					font-size: inherit;
+				}
+			}
+		}
+		.tm_pb_blurb_content {
+			max-width: none;
+			@include font-size(14/16);
+			line-height: 24px;
+		}
+	}
+}

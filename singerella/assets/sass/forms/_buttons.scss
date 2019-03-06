@@ -1,0 +1,26 @@
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	@include btn;
+}
+
+// General styles
+.btn {
+	@include btn;
+	&:hover {
+		text-decoration: none;
+	}
+	&:focus {
+		outline: none;
+	}
+	&-fullwidth {
+		width: 100%;
+	}
+}
+
+.inline-btn {
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 10px;
+}

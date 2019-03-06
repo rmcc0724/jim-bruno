@@ -1,0 +1,107 @@
+#tm_builder_outer_content .tm_pb_contact_form .tm_pb_contact_form_input {
+	margin: 0 0 18px 0;
+}
+#tm_builder_outer_content {
+	.tm_pb_contact_form {
+		text-align: center;
+		opacity: 1 !important;
+	}
+
+	div.tm_pb_contact_right {
+		display: block;
+		@include media-breakpoint-up(xl) {
+			position: absolute;
+			right: calc(100% + 30px);
+			top: 26px;
+			min-width: 200px;
+		}
+	}
+	.tm_pb_contact_submit {
+		margin-top: 26px;
+	}
+
+	.tm_pb_contact_field {
+		text-align: left;
+		width: 100%;
+	}
+
+	.tm_contact_error {
+		border: 1px solid $color__border_not-valid;
+		background-color: $color__not-valid;
+	}
+
+	.tm-pb-contact-message {
+		color: red;
+
+		li:before {
+			color: red;
+		}
+	}
+
+	.cf-success-message {
+		color: $color__valid;
+	}
+
+	.tm-pb-contact-message {
+		font-size: 14px;
+		margin-bottom: 8px;
+		text-align: left;
+		@include media-breakpoint-up(md) {
+			text-align: right;
+		}
+
+		li, p {
+
+		}
+
+		p {
+			margin-bottom: 0;
+			padding-right: 10px;
+		}
+
+		p, ul {
+			display: inline;
+		}
+
+		ul + p {
+			&:before {
+				content: "";
+				display: block;
+			}
+		}
+
+		ul:not([class]) {
+			li {
+				display: inline;
+				padding-left: 0;
+
+				&::before {
+					content: none;
+				}
+				&::after {
+					content: ",";
+					display: inline-block;
+					margin-right: 6px;
+				}
+				&:last-child {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.tm_pb_contact_main_title {
+		margin-bottom: 0;
+		margin-top: 0;
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 15px;
+		}
+	}
+}
+.tm_pb_contact_form.light input,
+.tm_pb_contact_form.light textarea {
+	background-color: #fff;
+	font-size: 16px;
+}

@@ -1,0 +1,128 @@
+/* idivider-separator */
+
+.elementor-widget-container {
+	.elementor-divider-separator {
+		border-color: $color__background-hr;
+		.hr-arr & {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				margin-left: -4px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 5px 4px 0 4px;
+				border-color: $color__background-hr transparent transparent transparent;
+			}
+		}
+		.hr-arr-color-gray & {
+			&:before {
+				border-color: #595c5f transparent transparent transparent;
+			}
+		}
+	}
+	.elementor-button-wrapper {
+		.elementor-button {
+			@include btn;
+		}
+	}
+	.elementor-button {
+		/* Sizes */
+		// Extra small
+		&.elementor-size-xs {
+			font-size: 80%;
+			padding: $button__indents_xsmall;
+		} // Small
+		&.elementor-size-sm {
+			font-size: 90%;
+			padding: $button__indents_small;
+		} // Medium
+		&.elementor-size-md {
+			padding: $button__indents;
+		} // Large
+		&.elementor-size-lg {
+			font-size: 110%;
+			padding: $button__indents_large;
+		} // Extra large
+		&.elementor-size-xl {
+			font-size: 120%;
+			padding: $button__indents_xlarge;
+		}
+	}
+	.follow-block+.subscribe-block {
+		margin-top: 35px;
+	}
+}
+
+
+/* image-box */
+
+.elementor-element.elementor-widget-image-box {
+	&.elementor-position-left {
+		figure.elementor-image-box-img {
+			margin-bottom: 15px;
+		}
+	}
+	margin-bottom: 3px;
+	.elementor-image-box-content{
+		.elementor-image-box-title{
+			margin-bottom: 5px;
+		}
+
+	}
+}
+
+
+/* social-icon */
+
+.elementor-social-icon {
+	margin-bottom: 5px;
+}
+
+
+/* jet-posts */
+.elementor-jet-posts {
+	.jet-carousel {
+		.jet-posts {
+
+			.entry-title {
+				font-size: 18px;
+				font-weight: 400;
+				margin-top: 3px;
+				text-transform: none;
+			}
+
+			.entry-excerpt{
+				margin-bottom: 50px;
+			}
+
+			.slick-next,
+			.slick-prev {
+				bottom: 0;
+				top: auto;
+				&:before {
+					@include font-size(50/16);
+					font-weight: 100;
+				}
+			}
+
+			.slick-next {
+				right: 10%;
+			}
+
+			.slick-prev {
+				left: auto;
+				right: 20%;
+			}
+
+			.slick-track {
+				.jet-posts__item {
+					outline: none;
+				}
+			}
+		}
+	}
+}

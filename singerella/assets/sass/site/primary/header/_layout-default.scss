@@ -1,0 +1,66 @@
+.site-header.default {
+
+	.header-container {
+		padding-top: 16px;
+		position: relative;
+
+		&__flex {
+			flex-wrap: wrap;
+		}
+	}
+
+	.site-branding {
+		width: 100%;
+	}
+
+	.main-navigation {
+		@include media-breakpoint-up(md) {
+			width: calc(100% - 30px);
+		}
+
+		&.isStuck {
+			width: 100%;
+		}
+	}
+
+	.search-form {
+		& {
+			margin-top: 0px;
+
+			@include media-breakpoint-up(md) {
+				margin-top: 26px;
+			}
+		}
+		&__close {
+			margin-top: 24px;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		.header-container {
+			padding-top: 34px;
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+
+		.site-branding {
+			order: 0;
+		}
+
+		.main-navigation {
+			order: 3;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+
+		.site-branding {
+			order: 2;
+		}
+
+		.main-navigation {
+			order: 3;
+		}
+	}
+}

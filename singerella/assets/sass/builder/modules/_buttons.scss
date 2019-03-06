@@ -1,0 +1,65 @@
+#tm_builder_outer_content a.tm_pb_button,
+#tm_builder_outer_content a.tm_pb_button:hover,
+#tm_builder_outer_content button.tm_pb_button,
+#tm_builder_outer_content button.tm_pb_button:hover,
+.btn-lg {
+	@extend .btn;
+	&::after {
+		content: ""!important;
+	}
+}
+
+
+#tm_builder_outer_content div.tm_contact_bottom_container {
+	overflow: visible;
+	text-align: center;
+	float: none;
+	display: inline-block;
+	position: relative;
+}
+
+#tm_builder_outer_content .no_float_button .tm_contact_bottom_container {
+	float: none;
+	.tm_pb_button {
+		margin: 0;
+	}
+}
+
+#tm_builder_outer_content .tm_pb_button {
+	margin-bottom: 20px;
+	@include media-breakpoint-up(md) {
+		margin-bottom: 0;
+	}
+}
+
+.showcase-panel__btn.btn-lg,
+.showcase-panel__btn.btn-secondary {
+	padding: 15px 32px;
+
+}
+
+
+.btn,
+.tm_pb_button {
+	.material-icons {
+		vertical-align: middle;
+		position: relative;
+		bottom: 2px;
+	}
+}
+
+.btn-secondary,
+#tm_builder_outer_content .tm_pb_button.btn-secondary,
+#tm_builder_outer_content .invert .tm_pb_button.btn-secondary,
+#tm_builder_outer_content .tm_pb_post .btn-primary,
+.showcase-panel__btn.btn-secondary {
+	background-color: transparent;
+
+	&:hover, &:focus {
+		background-color: transparent;
+	}
+}
+
+#tm_builder_outer_content .tm_pb_post .btn-primary {
+	border: none;
+}

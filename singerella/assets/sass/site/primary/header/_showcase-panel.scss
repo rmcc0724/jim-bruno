@@ -1,0 +1,63 @@
+.showcase-active {
+
+}
+
+.showcase-panel{
+	position: relative;
+	padding-top: 30px;
+	padding-bottom: 45px;
+	text-align: left;
+	background-size: cover;
+	background-position: center;
+	z-index: 1;
+
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	@include media-breakpoint-up(md) {
+		padding-top: 70px;
+		padding-bottom: 80px;
+	}
+	@include media-breakpoint-up(xl) {
+		padding: 182px 0 233px;
+	}
+
+	&__title {
+		
+	}
+	&__subtitle,
+	&__description {
+		max-width: 365px;
+	}
+
+	&__title {
+		margin: 0 0 9px;
+	}
+	&__subtitle {
+		margin: 0 0 29px;
+		letter-spacing: 4px;
+	}
+	&__description {
+		margin: 0 0 0px;
+		letter-spacing: 0.04em;
+		@include font-size(16/16);
+	}
+	&__btn {
+		margin: 47px 0 0; 
+		letter-spacing: 0.1em;
+		& + & {
+			margin: 20px 100% 0 0;
+
+			@include media-breakpoint-up(sm) {
+				margin: 34px 0 0 15px;
+			}
+		}
+	}
+}

@@ -1,0 +1,6 @@
+/*circle-progress*/
+.elementor-circle-progress .circle-val {
+	font-size: 40px;
+	font-weight: 700;
+	color: $regular_accent_color_1;
+}

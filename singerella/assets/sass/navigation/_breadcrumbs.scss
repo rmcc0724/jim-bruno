@@ -1,0 +1,53 @@
+.breadcrumbs {
+	position: relative;
+	margin: 0;
+	padding: 12px 0 17px;
+
+	@include media-breakpoint-up(lg) {
+		margin: 0;
+		padding: 28px 0 37px;
+	}
+
+	> .container {
+		.row {
+			> * {
+				padding-left: $grid-gutter-width/2;
+				padding-right: $grid-gutter-width/2;
+			}
+
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+
+	&__items {
+		margin-top: 10px;
+	}
+
+	&__title {
+		.page-title {
+			margin: 0;
+		}
+	}
+	&__browse {
+		float: left;
+		margin-right: .5em;
+	}
+	&__wrap {
+		float: left;
+		margin: 0;
+		@include media-breakpoint-up(lg) {
+			margin: .25em 0;
+		}
+	}
+	&__item {
+		float: left;
+		&-sep {
+			margin: 0 .5em;
+		}
+		&-link {
+			text-decoration: none;
+		}
+	}
+}

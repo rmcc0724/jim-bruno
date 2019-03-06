@@ -1,0 +1,123 @@
+ #tm_builder_outer_content {
+
+	div.tm_pb_testimonial {
+
+		&:before {
+			text-align: left;
+		}
+
+		position: relative;
+		.tm_pb_testimonial_description_inner {
+			width: 100%!important;
+		}
+
+		.tm_pb_testimonial_portrait {
+			width: 135px;
+			height: 135px;
+			border-radius: 50%;
+			float: none;
+			@include media-breakpoint-up(lg) {
+				float: left;
+				margin-right: 0;
+			}
+		}
+
+		.tm_pb_testimonial_description {
+			padding-top: 15px;
+		}
+
+		.tm_pb_testimonial_author {
+			position: relative;
+			padding-left: 26px;
+			display: inline-block;
+			margin-top: 6px;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 16px;
+				left: 0;
+				width: 20px;
+				height: 2px;
+			}
+		}
+	}
+
+	.tm_pb_column_1_3, .tm_pb_column_1_4 {
+		div.tm_pb_testimonial {
+			.tm_pb_testimonial_portrait {
+				margin-bottom: 30px;
+			}
+
+			@include media-breakpoint-up(md) {
+				.tm_pb_testimonial_portrait {
+					margin-bottom: 62px;
+				}
+			}
+		}
+	}
+
+	.tm_pb_column_1_2, .tm_pb_column_4_4 {
+		div.tm_pb_testimonial {
+			padding-top: 34px;
+
+			.tm_pb_testimonial_portrait {
+			 	margin-right: 15px;
+			 	display: inline-block;
+		 	}
+		 	&.tm_pb_text_align_center {
+				.tm_pb_testimonial_portrait {
+					margin-right: 0;
+				}
+			}
+
+		 	.tm_pb_testimonial_description {
+				display: block;
+				overflow: hidden;
+				@include media-breakpoint-up(lg) {
+					position: relative;
+				}
+		   	}
+		}
+	}
+}
+
+#tm_builder_outer_content .tm_pb_testimonial.tm_pb_text_align_center .tm_pb_testimonial_portrait {
+	float: none;
+}
+
+.tm-testi {
+	&--boxed {
+		blockquote {
+			display: block;
+			padding: 8px 33px;
+
+			@include media-breakpoint-down(sm) {
+					padding: 8px 15px;
+				}
+
+			@include font-size(16/16);
+			font-style: italic;
+			&:before {
+				content: none;
+			}
+			.avatar {
+				float: left;
+				border: none;
+				margin: 0 25px 10px 0;
+			}
+			.tm-testi__item-body {
+				p {
+					text-align: left;
+					line-height: 1.8;
+					margin-bottom: 17px;
+				}
+				footer {
+					align-items: flex-start;
+					cite {
+						margin-top: 5px;
+					}
+				}
+			}
+		}
+	}
+}

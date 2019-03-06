@@ -1,0 +1,140 @@
+#tm_builder_outer_content {
+	.tm_pb_preload {
+		&:before {
+			background: none !important;
+		}
+	}
+	.tm_pb_module.tm_pb_video_slider {
+		.tm_pb_slides {
+			.tm-pb-active-slide {
+				display: block;
+			}
+		}
+		.tm_pb_slider:hover {
+			.tm-pb-slider-arrows {
+				.tm-pb-arrow {
+					&-prev {
+						left: 15px !important;
+					}
+
+					&-next {
+						right: 15px !important;
+					}
+				}
+			}
+			.tm_pb_video {
+				&_overlay {
+					.tm_pb_video_overlay_hover{
+						a.tm_pb_video_play {
+							visibility: visible;
+							opacity: 1;
+							transform: scale(1);
+						}
+					}
+				}
+			}
+		}
+		.tm-pb-slider-arrows {
+			.tm-pb-arrow {
+				&-prev,
+				&-next {
+					transform: translateY(0);
+					background: none;
+
+					&:hover {
+						background: none;
+					}
+				}
+
+				&-prev {
+					left: -58px !important;
+				}
+
+				&-next {
+					right: -58px !important;
+				}
+			}
+		}
+
+		.tm_pb_carousel {
+			margin-top: 1px;
+
+			.tm-pb-slider-arrows {
+				display: none !important;
+			}
+			&_items {
+				&.columns-6 .tm_pb_carousel_item {
+					width: 16.666%;
+				}
+
+				&.columns-5 .tm_pb_carousel_item {
+					width: 20%;
+				}
+
+				&.columns-4 .tm_pb_carousel_item {
+					width: 25%;
+				}
+
+				&.columns-3 .tm_pb_carousel_item {
+					width: 33.334%;
+				}
+
+				&.columns-2 .tm_pb_carousel_item {
+					width: 50%;
+				}
+
+				&.columns-1 .tm_pb_carousel_item {
+					width: 100%;
+				}
+
+				.tm_pb_carousel_item {
+					margin: 0;
+					border-left: 1px solid transparent;
+					background: none;
+
+					&.tm-pb-active-control {
+						.tm_pb_video_overlay_hover {
+							a.tm_pb_video_play {
+								opacity: 1;
+							}
+						}
+					}
+
+					&:first-child {
+						border-left: none;
+					}
+				}
+			}
+			.tm_pb_video_overlay_hover{
+				a.tm_pb_video_play {
+					&:before, &:hover:before {
+						background: none;
+					}
+				}
+			}
+		}
+
+		.tm_pb_slider .tm_pb_video {
+			&_overlay {
+				.tm_pb_video_overlay_hover{
+					a.tm_pb_video_play {
+						margin-left: -29px;
+						margin-top: -29px;
+						font-size: 35px;
+						line-height: 58px;
+
+						visibility: hidden;
+						opacity: 0;
+						transform: scale(.35);
+
+						&:before {
+							width: 58px;
+							height: 58px;
+							line-height: 58px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
